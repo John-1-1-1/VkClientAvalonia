@@ -1,17 +1,19 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/Storage/@EntryValue">Solution</s:String>
 	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">/usr/share/dotnet/sdk/6.0.109/MSBuild.dll</s:String>
 	<s:Int64 x:Key="/Default/Environment/Hierarchy/Build/BuildTool/MsbuildVersion/@EntryValue">1114112</s:Int64>
 	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9f3f3ab7_002D7f1a_002D4fa8_002Dbe89_002D0d26a7e479aa/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::3834E399-DD02-4312-9D9D-E5CA3DFFFBFE::net6.0::VkClientAvalonia.Tests.Tests.TestGetDataInJson_notNull&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::3834E399-DD02-4312-9D9D-E5CA3DFFFBFE::net6.0::VkClientAvalonia.Tests.Tests.TestSetDataInJson_isExist&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9f3f3ab7_002D7f1a_002D4fa8_002Dbe89_002D0d26a7e479aa/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::3834E399-DD02-4312-9D9D-E5CA3DFFFBFE::net6.0::VkClientAvalonia.Tests.Tests.TestGetDataInJson_notNull&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::3834E399-DD02-4312-9D9D-E5CA3DFFFBFE::net6.0::VkClientAvalonia.Tests.Tests.TestSetDataInJson_isExist&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b8a26fc1_002D26c9_002D4b79_002D9b11_002D026efe6eed79/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::3834E399-DD02-4312-9D9D-E5CA3DFFFBFE::net6.0::VkClientAvalonia.Tests.Tests.TestGetDataInJson_notNull&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::3834E399-DD02-4312-9D9D-E5CA3DFFFBFE::net6.0::VkClientAvalonia.Tests.Tests.TestSetDataInJson_isExist&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::3834E399-DD02-4312-9D9D-E5CA3DFFFBFE::net6.0::VkClientAvalonia.Tests.Tests.SingletonContainer_is_singleton&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b8a26fc1_002D26c9_002D4b79_002D9b11_002D026efe6eed79/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::3834E399-DD02-4312-9D9D-E5CA3DFFFBFE::net6.0::VkClientAvalonia.Tests.Tests.TestGetDataInJson_notNull&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::3834E399-DD02-4312-9D9D-E5CA3DFFFBFE::net6.0::VkClientAvalonia.Tests.Tests.TestSetDataInJson_isExist&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::3834E399-DD02-4312-9D9D-E5CA3DFFFBFE::net6.0::VkClientAvalonia.Tests.Tests.SingletonContainer_is_singleton&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::3834E399-DD02-4312-9D9D-E5CA3DFFFBFE::net6.0::VkClientAvalonia.Tests.Tests.SingletonContainer_addedObjects&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -25,7 +25,30 @@ public class ContextContainer {
 
         Context.Add(key, obj);
     }
+    
+    public void AddObject<ITypeObj, TypeObj>() {
+        Type type = typeof(TypeObj);
 
+        var ctor = type.GetConstructor(new Type[] { });
+
+        if (ctor == null)
+            throw new ArgumentException($"This constructor is not container: {nameof(ctor)} = {type}");
+
+        var obj = (ITypeObj)ctor.Invoke(new object[] { });
+        AddObject<ITypeObj>(obj);
+    }
+
+    public void AddObject<ITypeObj, TypeObj, TypeInpData>(TypeInpData typeInpData) {
+        Type type = typeof(TypeObj);
+
+        var ctor = type.GetConstructor(new Type[] { typeof(TypeInpData) });
+
+        if (ctor == null)
+            throw new ArgumentException($"This constructor is not container: {nameof(ctor)} = {type}");
+
+        AddObject<ITypeObj>((ITypeObj)ctor.Invoke(new object[] { typeInpData }));
+    }
+    
     public TypeObj GetObject<TypeObj>() {
 
         Type? key = null;
