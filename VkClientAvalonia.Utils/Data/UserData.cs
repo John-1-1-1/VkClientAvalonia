@@ -1,6 +1,13 @@
-﻿namespace VkClientAvalonia.Utils.Data; 
+namespace VkClientAvalonia.Utils.Data;
 
-public class UserData {
-    public string UserName;
-    public string Password;
+public class UserData
+{
+    public string Login { get; set; }
+    public string Password { get; set; }
+
+    public UserData(string login, string password)
+    {
+        Login = login;
+        Password = password;
+    }
 }
