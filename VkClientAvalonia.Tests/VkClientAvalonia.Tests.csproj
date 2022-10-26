@@ -21,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\VkClientAvalonia.Utils\VkClientAvalonia.Utils.csproj" />
+      <ProjectReference Include="..\VkClientAvalonia.Kernel\VkClientAvalonia.Kernel.csproj" />
     </ItemGroup>
 
 </Project>

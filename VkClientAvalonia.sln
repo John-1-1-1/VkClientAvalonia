@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkClientAvalonia.GUI", "VkC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkClientAvalonia.Tests", "VkClientAvalonia.Tests\VkClientAvalonia.Tests.csproj", "{3834E399-DD02-4312-9D9D-E5CA3DFFFBFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkClientAvalonia.Utils", "VkClientAvalonia.Utils\VkClientAvalonia.Utils.csproj", "{FAA8131B-CD23-4179-84AD-F8E636BA2D9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkClientAvalonia.Kernel", "VkClientAvalonia.Kernel\VkClientAvalonia.Kernel.csproj", "{FAA8131B-CD23-4179-84AD-F8E636BA2D9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

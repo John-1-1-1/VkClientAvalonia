@@ -7,14 +7,14 @@ namespace VkClientAvalonia.Utils.UtilsToFiles;
 
 public static class GetterJson {
 
-    public static void SaveData(UserData data, string path)
+    public static void SaveData<TInp>(TInp data, string path)
     {
-        string jsonData = JsonSerializer.Serialize<UserData>( data);
+        string jsonData = JsonSerializer.Serialize<TInp>( data);
         File.WriteAllText(path, jsonData);   
     }
 
-    public static UserData GetData(string path) {
+    public static TInp? GetData<TInp>(string path) {
         string text = File.ReadAllText(path);
-        return JsonSerializer.Deserialize<UserData>(text);
+        return JsonSerializer.Deserialize<TInp>(text);
     }
 }
