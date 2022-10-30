@@ -1,9 +1,6 @@
-using System.IO;
 using System.Text.Json;
-using System.Threading.Tasks;
-using VkClientAvalonia.Utils.Data;
 
-namespace VkClientAvalonia.Utils.UtilsToFiles;
+namespace VkClientAvalonia.Utils.GetterFiles;
 
 public static class GetterJson {
 

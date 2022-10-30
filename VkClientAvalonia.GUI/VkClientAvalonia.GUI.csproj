@@ -29,4 +29,10 @@
     <ItemGroup>
       <Folder Include="Models" />
     </ItemGroup>
+    <ItemGroup>
+      <Compile Update="Views\UserControls\TableUserControl.axaml.cs">
+        <DependentUpon>TableUserControl.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
 </Project>

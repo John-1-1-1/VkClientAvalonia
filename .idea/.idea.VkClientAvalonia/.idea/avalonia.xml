@@ -5,6 +5,8 @@
       <map>
         <entry key="VkClientAvalonia.GUI/App.axaml" value="VkClientAvalonia.GUI/VkClientAvalonia.GUI.csproj" />
         <entry key="VkClientAvalonia.GUI/Views/MainWindow.axaml" value="VkClientAvalonia.GUI/VkClientAvalonia.GUI.csproj" />
+        <entry key="VkClientAvalonia.GUI/Views/TableUserControl.axaml" value="VkClientAvalonia.GUI/VkClientAvalonia.GUI.csproj" />
+        <entry key="VkClientAvalonia.GUI/Views/UserControls/TableUserControl.axaml" value="VkClientAvalonia.GUI/VkClientAvalonia.GUI.csproj" />
       </map>
     </option>
   </component>

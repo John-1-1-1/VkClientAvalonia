@@ -2,7 +2,7 @@ using System.IO;
 using System.Threading.Tasks;
 using VkClientAvalonia.Utils.Containers;
 using VkClientAvalonia.Utils.Data;
-using VkClientAvalonia.Utils.UtilsToFiles;
+using VkClientAvalonia.Utils.GetterFiles;
 using Xunit;
 
 namespace VkClientAvalonia.Tests;
@@ -20,8 +20,8 @@ public class Tests {
         var user = new UserData("1", "2");
         GetterJson.SaveData(user, FilePath);
 
-        var IsExist = File.Exists(FilePath);
-        Assert.True(IsExist);
+        var isExist = File.Exists(FilePath);
+        Assert.True(isExist);
         File.Delete(FilePath);
     }
 
@@ -57,6 +57,7 @@ public class Tests {
 
 internal class ForTests : IForTests {
     public ForTests() {
+       
     }
 }
 

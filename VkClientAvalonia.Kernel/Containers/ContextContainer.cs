@@ -33,9 +33,7 @@ public class ContextContainer {
 
         if (ctor == null)
             throw new ArgumentException($"This constructor is not container: {nameof(ctor)} = {type}");
-
-        var obj = (ITypeObj)ctor.Invoke(new object[] { });
-        AddObject<ITypeObj>(obj);
+        AddObject<ITypeObj>((ITypeObj)ctor.Invoke(new object[] { }));
     }
 
     public void AddObject<ITypeObj, TypeObj, TypeInpData>(TypeInpData typeInpData) {

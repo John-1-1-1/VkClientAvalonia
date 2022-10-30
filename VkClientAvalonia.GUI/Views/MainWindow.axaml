@@ -1,3 +1,4 @@
+
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:VkClientAvalonia.GUI.ViewModels"
@@ -11,7 +12,7 @@
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+    
+    <ContentControl Content="{Binding ContentWindow.Content}"></ContentControl>
+    
 </Window>
