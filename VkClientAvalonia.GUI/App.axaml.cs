@@ -3,10 +3,12 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using VkClientAvalonia.GUI.ViewModels;
 using VkClientAvalonia.GUI.Views;
+using VkClientAvalonia.Utils.Containers;
+using VkClientAvalonia.Utils.Vk;
 
 namespace VkClientAvalonia.GUI
 {
-    public partial class App : Application
+    public class App : Application
     {
         public override void Initialize()
         {
@@ -23,6 +25,8 @@ namespace VkClientAvalonia.GUI
                 };
             }
 
+            var singleton = SingletonContainer.GetInstance();
+            singleton.GetContainer().AddObject<IVkClient, VkClient>();
             base.OnFrameworkInitializationCompleted();
         }
     }

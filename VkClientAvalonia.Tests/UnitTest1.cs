@@ -1,9 +1,11 @@
 using System.IO;
+using System.Net;
 using System.Threading.Tasks;
 using VkClientAvalonia.Utils.Containers;
 using VkClientAvalonia.Utils.Data;
 using VkClientAvalonia.Utils.GetterFiles;
 using Xunit;
+using VkClientAvalonia.Utils.Vk; 
 
 namespace VkClientAvalonia.Tests;
 
@@ -52,6 +54,12 @@ public class Tests {
         var container1 = s1.GetContainer();
 
         Assert.NotNull(container1.GetObject<IForTests>());
+    }
+
+    [Fact]
+    public void AuthorizeVkTest_Error() {
+        var r = new VkClient();
+        Assert.Equal(r.Authorize("", "", 1), 1);
     }
 }
 

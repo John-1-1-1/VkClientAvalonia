@@ -35,4 +35,7 @@
         <SubType>Code</SubType>
       </Compile>
     </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\VkClientAvalonia.Kernel\VkClientAvalonia.Kernel.csproj" />
+    </ItemGroup>
 </Project>

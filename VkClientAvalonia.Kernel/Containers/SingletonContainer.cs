@@ -5,6 +5,7 @@ public class SingletonContainer {
     private static SingletonContainer? _container { get; set; }
 
     private ContextContainer Context { get; set; }
+
     
     private static object syncRoot = new Object();
     public static SingletonContainer GetInstance() {
