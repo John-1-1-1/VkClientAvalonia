@@ -9,6 +9,7 @@
         <entry key="VkClientAvalonia.GUI/Views/TableUserControl.axaml" value="VkClientAvalonia.GUI/VkClientAvalonia.GUI.csproj" />
         <entry key="VkClientAvalonia.GUI/Views/UserControls/AuthorizationWindow.axaml" value="VkClientAvalonia.GUI/VkClientAvalonia.GUI.csproj" />
         <entry key="VkClientAvalonia.GUI/Views/UserControls/AuthorizationWindwo.axaml" value="VkClientAvalonia.GUI/VkClientAvalonia.GUI.csproj" />
+        <entry key="VkClientAvalonia.GUI/Views/UserControls/AutorizationControl.axaml" value="VkClientAvalonia.GUI/VkClientAvalonia.GUI.csproj" />
         <entry key="VkClientAvalonia.GUI/Views/UserControls/TableUserControl.axaml" value="VkClientAvalonia.GUI/VkClientAvalonia.GUI.csproj" />
       </map>
     </option>
