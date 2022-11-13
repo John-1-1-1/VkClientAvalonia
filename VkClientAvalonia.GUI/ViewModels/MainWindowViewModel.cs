@@ -10,7 +10,6 @@ public class MainWindowViewModel : ViewModelBase, IMainWindowViewModel {
 
     public MainWindowViewModel() {
         ContentWindow = new ContentWindow();
-        OpenNewContentWindow(new AuthorizationWindow(this));
     }
 
     public void OpenNewContentWindow(object new_content) {
