@@ -2,10 +2,10 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace VkClientAvalonia.GUI.Views; 
+namespace VkClientAvalonia.GUI.App.Views.Controls; 
 
-public partial class TableUserControl : UserControl {
-    public TableUserControl() {
+public partial class Autorization : UserControl {
+    public Autorization() {
         InitializeComponent();
     }
 

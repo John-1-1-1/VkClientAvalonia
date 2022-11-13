@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using VkClientAvalonia.GUI.ViewModels;
 
 namespace VkClientAvalonia.GUI.Views
 {
@@ -7,6 +8,7 @@ namespace VkClientAvalonia.GUI.Views
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel();
         }
     }
 }

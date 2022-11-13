@@ -3,6 +3,12 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="VkClientAvalonia.GUI.App/App.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
+        <entry key="VkClientAvalonia.GUI.App/ViewModels/Controls/Autorization.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
+        <entry key="VkClientAvalonia.GUI.App/ViewModels/Controls/Dialogs.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
+        <entry key="VkClientAvalonia.GUI.App/Views/Controls/Autorization.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
+        <entry key="VkClientAvalonia.GUI.App/Views/Controls/Dialogs.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
+        <entry key="VkClientAvalonia.GUI.App/Views/MainWindow.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
         <entry key="VkClientAvalonia.GUI/App.axaml" value="VkClientAvalonia.GUI/VkClientAvalonia.GUI.csproj" />
         <entry key="VkClientAvalonia.GUI/Views/DialogsWindow.axaml" value="VkClientAvalonia.GUI/VkClientAvalonia.GUI.csproj" />
         <entry key="VkClientAvalonia.GUI/Views/MainWindow.axaml" value="VkClientAvalonia.GUI/VkClientAvalonia.GUI.csproj" />

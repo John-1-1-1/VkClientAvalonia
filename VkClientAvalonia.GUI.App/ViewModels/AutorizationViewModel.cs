@@ -1,14 +1,11 @@
-using System;
 using System.Reactive;
 using ReactiveUI;
-using VkClientAvalonia.GUI.Views;
 using VkClientAvalonia.Utils.Containers;
 using VkClientAvalonia.Utils.Vk;
 
-namespace VkClientAvalonia.GUI.ViewModels; 
+namespace VkClientAvalonia.GUI.App.ViewModels; 
 
-public class AutorizationWindowViewModel: ViewModelBase {
-
+public class AutorizationViewModel {
     public string Login { get; set; } 
     public string Password { get; set; }
     
@@ -17,14 +14,9 @@ public class AutorizationWindowViewModel: ViewModelBase {
     public ReactiveCommand<Unit, Unit> LoginButton { get; init; }
 
 
-    public AutorizationWindowViewModel( ) {
+    public AutorizationViewModel( ) {
         LoginButton = ReactiveCommand.Create(LoginButton_Click);
 
-    }
-
-    private MainWindowViewModel mainWindowViewModel;
-    public AutorizationWindowViewModel(MainWindowViewModel mainWindowViewModel) {
-        LoginButton = ReactiveCommand.Create(LoginButton_Click);
     }
 
     void LoginButton_Click() {

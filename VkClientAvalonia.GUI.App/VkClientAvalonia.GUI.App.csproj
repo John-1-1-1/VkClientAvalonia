@@ -8,6 +8,7 @@
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     </PropertyGroup>
     <ItemGroup>
+        <Folder Include="Models\" />
         <AvaloniaResource Include="Assets\**" />
         <None Remove=".gitignore" />
     </ItemGroup>
@@ -32,6 +33,10 @@
         <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.0-preview4" />
         <PackageReference Include="Avalonia.Themes.Simple" Version="11.0.0-preview4" />
         <PackageReference Include="XamlNameReferenceGenerator" Version="1.4.2" />
+    </ItemGroup>
+    <ItemGroup>
+      <UpToDateCheckInput Remove="ViewModels\Controls\Autorization.axaml" />
+      <UpToDateCheckInput Remove="ViewModels\Controls\Dialogs.axaml" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\VkClientAvalonia.Kernel\VkClientAvalonia.Kernel.csproj" />

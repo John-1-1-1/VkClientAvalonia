@@ -1,38 +1,34 @@
-﻿using VkClientAvalonia.GUI.Views;
+﻿using System.Reactive;
+using ReactiveUI;
+using VkClientAvalonia.GUI.Views;
 using VkClientAvalonia.GUI.Views.UserControls;
 using VkClientAvalonia.Utils.Containers;
 
 namespace VkClientAvalonia.GUI.ViewModels;
 
-public class MainWindowViewModel : ViewModelBase, IMainWindowViewModel {
+public class MainWindowViewModel : ViewModelBase {
 
-    public ContentWindow ContentWindow { get; set; }
+    private bool _isVisibleAutorizationControl = true;
 
+    public bool h {
+        get => _isVisibleAutorizationControl;
+        set => this.RaiseAndSetIfChanged(ref _isVisibleAutorizationControl, value);
+    }
+    private bool _u1V;
+
+    public bool u1V
+    {
+        get => _u1V;
+        set => this.RaiseAndSetIfChanged(ref _u1V, value);
+    }
+    public ReactiveCommand<Unit, Unit> But { get; init; }
+        
     public MainWindowViewModel() {
-        ContentWindow = new ContentWindow();
-    }
+        h = false;
 
-    public void OpenNewContentWindow(object new_content) {
-        ContentWindow = new ContentWindow();
-        ContentWindow.Content = new_content;
-    }
-    
-}
-
-public interface IMainWindowViewModel {
-    public void OpenNewContentWindow(object new_content);
-}
-
-public interface IContentWindow {
-
-    public object? Content { get; set; }
-}
-
-public class ContentWindow : IContentWindow {
-
-    public object? Content { get; set; }
-
-    public ContentWindow() {
-        Content = null;
+        But = ReactiveCommand.Create(() => {
+            u1V = !u1V;
+        });
     }
 }
+

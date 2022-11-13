@@ -2,14 +2,11 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace VkClientAvalonia.GUI.Views; 
+namespace VkClientAvalonia.GUI.App.Views.Controls; 
 
-public partial class DialogsWindow : Window {
-    public DialogsWindow() {
+public partial class Dialogs : UserControl {
+    public Dialogs() {
         InitializeComponent();
-#if DEBUG
-        this.AttachDevTools();
-#endif
     }
 
     private void InitializeComponent() {

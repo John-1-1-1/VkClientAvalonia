@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkClientAvalonia.Tests", "V
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkClientAvalonia.Kernel", "VkClientAvalonia.Kernel\VkClientAvalonia.Kernel.csproj", "{FAA8131B-CD23-4179-84AD-F8E636BA2D9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkClientAvalonia.GUI.App", "VkClientAvalonia.GUI.App\VkClientAvalonia.GUI.App.csproj", "{F9860F12-B73D-47BF-802F-F27713D07AC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,7 @@ Global
 		{BFCEB5A2-CB2D-42D1-A7C9-2B38C4965F10} = {BD8C78D8-F6CE-498E-8470-161CBF027A35}
 		{3834E399-DD02-4312-9D9D-E5CA3DFFFBFE} = {BD8C78D8-F6CE-498E-8470-161CBF027A35}
 		{FAA8131B-CD23-4179-84AD-F8E636BA2D9A} = {BD8C78D8-F6CE-498E-8470-161CBF027A35}
+		{F9860F12-B73D-47BF-802F-F27713D07AC4} = {BD8C78D8-F6CE-498E-8470-161CBF027A35}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BFCEB5A2-CB2D-42D1-A7C9-2B38C4965F10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -31,5 +34,9 @@ Global
 		{FAA8131B-CD23-4179-84AD-F8E636BA2D9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAA8131B-CD23-4179-84AD-F8E636BA2D9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAA8131B-CD23-4179-84AD-F8E636BA2D9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9860F12-B73D-47BF-802F-F27713D07AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9860F12-B73D-47BF-802F-F27713D07AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9860F12-B73D-47BF-802F-F27713D07AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9860F12-B73D-47BF-802F-F27713D07AC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
