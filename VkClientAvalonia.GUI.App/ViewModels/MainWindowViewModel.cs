@@ -41,11 +41,12 @@ public class MainWindowViewModel : ViewModelBase, IMainControls {
 
     
     public void ShowAutorizationControl() {
-     
+        DialogControlStateShow = false;
+        AutorizationControlStateShow = true;
     }
 
     public void ShowDialogsControl() {
-        DialogControlStateShow = !DialogControlStateShow;
+        DialogControlStateShow = true;
         AutorizationControlStateShow = false;
     }
 }

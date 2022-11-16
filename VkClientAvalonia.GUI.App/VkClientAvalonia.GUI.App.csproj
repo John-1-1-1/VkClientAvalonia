@@ -46,5 +46,9 @@
         <DependentUpon>Autorization.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+      <Compile Update="Views\Controls\Client\Dialogs.axaml.cs">
+        <DependentUpon>Dialogs.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
     </ItemGroup>
 </Project>

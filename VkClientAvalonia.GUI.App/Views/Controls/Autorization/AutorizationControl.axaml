@@ -9,7 +9,9 @@
     <StackPanel HorizontalAlignment = "Center" 
                 VerticalAlignment="Center"
                 MinWidth="200">
-        <Label>Логин</Label>
+        
+            <Label IsVisible="{Binding ErrorTextDtateControl}" Foreground="Red">Не верный логин или пароль</Label>
+            <Label>Логин</Label>
         <TextBox Text="{Binding Login}"></TextBox>
         <Label>Пароль</Label>
         <TextBox PasswordChar="#" Text="{Binding Password}"></TextBox>
