@@ -7,32 +7,32 @@ namespace VkClientAvalonia.GUI.App.ViewModels;
 
 public class MainWindowViewModel : ViewModelBase, IMainControls {
 
-    private bool _u1V;
+    private bool _dialogControlStateShow;
 
     public AutorizationViewModel Autorization { get; set; }
 
-    public bool u1V {
-        get => _u1V;
-        set => this.RaiseAndSetIfChanged(ref _u1V, value);
+    public bool DialogControlStateShow {
+        get => _dialogControlStateShow;
+        set => this.RaiseAndSetIfChanged(ref _dialogControlStateShow, value);
     }
 
-    private bool _u2V;
+    private bool _autorizationControlStateShow;
 
-    public bool u2V {
-        get => _u2V;
-        set => this.RaiseAndSetIfChanged(ref _u2V, value);
+    public bool AutorizationControlStateShow {
+        get => _autorizationControlStateShow;
+        set => this.RaiseAndSetIfChanged(ref _autorizationControlStateShow, value);
     }
     
     public ReactiveCommand<Unit, Unit> But { get; init; }
     
     public MainWindowViewModel() {
         Autorization = new AutorizationViewModel();
-        u1V = false;
-        u2V = true;
+        DialogControlStateShow = false;
+        AutorizationControlStateShow = true;
         
         But = ReactiveCommand.Create(() => {
-            u1V = !u1V;
-            u2V = !u2V;
+            DialogControlStateShow = !DialogControlStateShow;
+            AutorizationControlStateShow = !AutorizationControlStateShow;
         });
         
         var singleton = SingletonContainer.GetInstance();
@@ -41,12 +41,12 @@ public class MainWindowViewModel : ViewModelBase, IMainControls {
 
     
     public void ShowAutorizationControl() {
-        throw new System.NotImplementedException();
+     
     }
 
     public void ShowDialogsControl() {
-        u1V = !u1V;
-        u2V = !u2V;
+        DialogControlStateShow = !DialogControlStateShow;
+        AutorizationControlStateShow = false;
     }
 }
 

@@ -13,10 +13,9 @@
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-
-    <StackPanel>
-        <autorization:AutorizationMediator IsVisible="{Binding u2V}" />
-        <controls:Dialogs  IsVisible="{Binding u1V}" />
-    </StackPanel>
+<Panel>
+        <autorization:AutorizationMediator IsVisible="{Binding AutorizationControlStateShow}" />
+        <controls:Dialogs VerticalAlignment="Center" HorizontalAlignment="Center" IsVisible="{Binding DialogControlStateShow}" />
+    </Panel>
     
 </Window>
