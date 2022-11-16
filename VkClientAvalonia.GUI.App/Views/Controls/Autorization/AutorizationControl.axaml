@@ -3,7 +3,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="VkClientAvalonia.GUI.App.Views.Controls.Autorization">
+             x:Class="VkClientAvalonia.GUI.App.Views.Controls.AutorizationControl">
+    
     
     <StackPanel HorizontalAlignment = "Center" 
                 VerticalAlignment="Center"
@@ -17,6 +18,6 @@
         <Label></Label>
         <Button Width="200" HorizontalContentAlignment="Center"
                 Command="{Binding LoginButton}">Вход</Button>
-    </StackPanel>
+        </StackPanel>
     
 </UserControl>

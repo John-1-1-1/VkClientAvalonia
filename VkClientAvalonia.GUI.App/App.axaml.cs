@@ -3,6 +3,8 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using VkClientAvalonia.GUI.App.ViewModels;
 using VkClientAvalonia.GUI.App.Views;
+using VkClientAvalonia.Utils.Containers;
+using VkClientAvalonia.Utils.Vk;
 
 namespace VkClientAvalonia.GUI.App {
     public partial class App : Application {
@@ -16,7 +18,10 @@ namespace VkClientAvalonia.GUI.App {
                     DataContext = new MainWindowViewModel(),
                 };
             }
-
+            
+            var singleton = SingletonContainer.GetInstance();
+            singleton.GetContainer().AddObject<IVkClient, VkClient>();
+            
             base.OnFrameworkInitializationCompleted();
         }
     }

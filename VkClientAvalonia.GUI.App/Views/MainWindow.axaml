@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:controls="clr-namespace:VkClientAvalonia.GUI.App.Views.Controls"
+        xmlns:autorization="clr-namespace:VkClientAvalonia.GUI.App.Views.Controls.Autorization"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="VkClientAvalonia.GUI.App.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
@@ -13,17 +14,9 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <Grid ShowGridLines="True">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions >
-            <ColumnDefinition Width="Auto"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <controls:Autorization IsVisible="{Binding u2V}" Grid.Column="0" Grid.Row="0"/>
-        <controls:Dialogs  IsVisible="{Binding u1V}" Grid.Column="0" Grid.Row="0"/>
-        <Button Grid.Column="0" Grid.Row="1" Command="{Binding But}">Fuck</Button>
-    </Grid>
+    <StackPanel>
+        <autorization:AutorizationMediator IsVisible="{Binding u2V}" />
+        <controls:Dialogs  IsVisible="{Binding u1V}" />
+    </StackPanel>
     
 </Window>

@@ -3,6 +3,7 @@ using ReactiveUI;
 using VkClientAvalonia.GUI.Views;
 using VkClientAvalonia.GUI.Views.UserControls;
 using VkClientAvalonia.Utils.Containers;
+using VkClientAvalonia.Utils.Vk;
 
 namespace VkClientAvalonia.GUI.ViewModels;
 
@@ -22,7 +23,20 @@ public class MainWindowViewModel : ViewModelBase {
         set => this.RaiseAndSetIfChanged(ref _u1V, value);
     }
     public ReactiveCommand<Unit, Unit> But { get; init; }
+    
+    void LoginButton_Click() {
         
+        var vkClient = SingletonContainer.GetInstance().GetContainer().GetObject<IVkClient>();
+      
+
+      
+    }
+    
+    public string Login { get; set; } 
+    public string Password { get; set; }
+    
+    public ulong AppId { get; set; }
+    
     public MainWindowViewModel() {
         h = false;
 

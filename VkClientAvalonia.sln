@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BD8C78D8-F6CE-498E-8470-161CBF027A35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkClientAvalonia.GUI", "VkClientAvalonia.GUI\VkClientAvalonia.GUI.csproj", "{BFCEB5A2-CB2D-42D1-A7C9-2B38C4965F10}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkClientAvalonia.Tests", "VkClientAvalonia.Tests\VkClientAvalonia.Tests.csproj", "{3834E399-DD02-4312-9D9D-E5CA3DFFFBFE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkClientAvalonia.Kernel", "VkClientAvalonia.Kernel\VkClientAvalonia.Kernel.csproj", "{FAA8131B-CD23-4179-84AD-F8E636BA2D9A}"
@@ -16,16 +14,11 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{BFCEB5A2-CB2D-42D1-A7C9-2B38C4965F10} = {BD8C78D8-F6CE-498E-8470-161CBF027A35}
 		{3834E399-DD02-4312-9D9D-E5CA3DFFFBFE} = {BD8C78D8-F6CE-498E-8470-161CBF027A35}
 		{FAA8131B-CD23-4179-84AD-F8E636BA2D9A} = {BD8C78D8-F6CE-498E-8470-161CBF027A35}
 		{F9860F12-B73D-47BF-802F-F27713D07AC4} = {BD8C78D8-F6CE-498E-8470-161CBF027A35}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BFCEB5A2-CB2D-42D1-A7C9-2B38C4965F10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BFCEB5A2-CB2D-42D1-A7C9-2B38C4965F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BFCEB5A2-CB2D-42D1-A7C9-2B38C4965F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BFCEB5A2-CB2D-42D1-A7C9-2B38C4965F10}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3834E399-DD02-4312-9D9D-E5CA3DFFFBFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3834E399-DD02-4312-9D9D-E5CA3DFFFBFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3834E399-DD02-4312-9D9D-E5CA3DFFFBFE}.Release|Any CPU.ActiveCfg = Release|Any CPU

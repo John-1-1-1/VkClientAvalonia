@@ -41,4 +41,10 @@
     <ItemGroup>
       <ProjectReference Include="..\VkClientAvalonia.Kernel\VkClientAvalonia.Kernel.csproj" />
     </ItemGroup>
+    <ItemGroup>
+      <Compile Update="Views\Controls\Autorization\AutorizationControl.axaml.cs">
+        <DependentUpon>Autorization.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
 </Project>
