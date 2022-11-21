@@ -3,7 +3,7 @@
         xmlns:vm="using:VkClientAvalonia.GUI.App.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:controls="clr-namespace:VkClientAvalonia.GUI.App.Views.Controls"
+        xmlns:client="clr-namespace:VkClientAvalonia.GUI.App.Views.Controls.Client"
         xmlns:autorization="clr-namespace:VkClientAvalonia.GUI.App.Views.Controls.Autorization"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="VkClientAvalonia.GUI.App.Views.MainWindow"
@@ -15,7 +15,7 @@
     </Design.DataContext>
 <Panel>
         <autorization:AutorizationMediator IsVisible="{Binding AutorizationControlStateShow}" />
-        <controls:Dialogs VerticalAlignment="Center" HorizontalAlignment="Center" IsVisible="{Binding DialogControlStateShow}" />
+        <client:ListDialogMediator  IsVisible="{Binding DialogControlStateShow}" />
     </Panel>
     
 </Window>

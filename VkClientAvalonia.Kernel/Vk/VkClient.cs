@@ -16,10 +16,21 @@ public class VkClient: IVkClient {
                 ApplicationId = appId,
                 Settings = Settings.All
             });
+
             return 0;
         }
         catch {
             return 1;
         }
     }
+
+    public MessagesGetObject Get20Messsages(int offset, uint count) {
+        return api.Messages.GetDialogs(new VkNet.Model.RequestParams.MessagesDialogsGetParams
+        {
+            Offset = offset,
+            Count = count
+        });
+    }
+    
+    
 }

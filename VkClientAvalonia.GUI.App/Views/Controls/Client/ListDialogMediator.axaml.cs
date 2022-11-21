@@ -1,12 +1,11 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using VkClientAvalonia.GUI.ViewModels;
 
-namespace VkClientAvalonia.GUI.Views.UserControls; 
+namespace VkClientAvalonia.GUI.App.Views.Controls.Client; 
 
-public partial class AutorizationControl : UserControl {
-    public AutorizationControl() {
+public partial class ListDialogMediator : UserControl {
+    public ListDialogMediator() {
         InitializeComponent();
     }
 

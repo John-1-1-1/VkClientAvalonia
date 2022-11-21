@@ -7,7 +7,11 @@
         <entry key="VkClientAvalonia.GUI.App/ViewModels/Controls/Autorization.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
         <entry key="VkClientAvalonia.GUI.App/ViewModels/Controls/Dialogs.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
         <entry key="VkClientAvalonia.GUI.App/Views/Controls/Autorization.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
+        <entry key="VkClientAvalonia.GUI.App/Views/Controls/Autorization/AutorizationControl.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
         <entry key="VkClientAvalonia.GUI.App/Views/Controls/Autorization/AutorizationMediator.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
+        <entry key="VkClientAvalonia.GUI.App/Views/Controls/Client/Dialogs.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
+        <entry key="VkClientAvalonia.GUI.App/Views/Controls/Client/ListDialogMediator.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
+        <entry key="VkClientAvalonia.GUI.App/Views/Controls/Client/ListDialogs.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
         <entry key="VkClientAvalonia.GUI.App/Views/Controls/Dialogs.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
         <entry key="VkClientAvalonia.GUI.App/Views/Controls/u1.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
         <entry key="VkClientAvalonia.GUI.App/Views/MainWindow.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />

@@ -28,6 +28,8 @@ public class AutorizationViewModel: ViewModelBase {
         
         var vkClient = SingletonContainer.GetInstance().GetContainer().GetObject<IVkClient>();
         var value = vkClient.Authorize(Login, Password, AppId);
+        
+        SingletonContainer.GetInstance().GetContainer().GetObject<IMainControls>().ShowDialogsControl();
         if (value == 0) {
             SingletonContainer.GetInstance().GetContainer().GetObject<IMainControls>().ShowDialogsControl();
         }

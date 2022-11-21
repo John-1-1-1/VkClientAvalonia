@@ -14,8 +14,6 @@
         
         <Panel Grid.Row="0"></Panel>
         
-        
-        <!-- TODO: test theme -->
         <Border Grid.Row="1">
             <StackPanel >
                 
