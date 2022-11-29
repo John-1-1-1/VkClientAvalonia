@@ -16,12 +16,14 @@ public class AutorizationViewModel: ViewModelBase {
         get => _ErrorTextDtateControl;
         set => this.RaiseAndSetIfChanged(ref _ErrorTextDtateControl, value);
     }
+    
     public ReactiveCommand<Unit, Unit> LoginButton { get; init; }
-
 
     public AutorizationViewModel( ) {
         LoginButton = ReactiveCommand.Create(LoginButton_Click);
         ErrorTextDtateControl = false;
+        
+        AppId = 6121396;
     }
 
     void LoginButton_Click() {

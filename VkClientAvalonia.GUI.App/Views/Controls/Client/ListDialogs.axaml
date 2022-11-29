@@ -9,7 +9,7 @@
     <Grid  ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition MaxHeight="70" MinHeight="40">
-            </RowDefinition>
+            </RowDefinition> 
             <RowDefinition ></RowDefinition>
         </Grid.RowDefinitions>
         
@@ -22,14 +22,26 @@
                 Background="GhostWhite"
                 BorderBrush="Gainsboro"
                 BorderThickness="1">
-            <TextBlock> ff</TextBlock>
+            <TextBlock Text="{Binding UserName}"></TextBlock>
         </Border>
         
         <ListBox Grid.Row="1" Items="{Binding Users}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border>
-                        <TextBlock Text="{Binding Name}"></TextBlock>
+                        <Panel>
+                            <Grid ShowGridLines="True">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="180"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="140"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                            
+                                <TextBlock Grid.Column="0"  HorizontalAlignment="Left" Text="{Binding Name}"></TextBlock>
+                                <TextBlock Grid.Column="1" HorizontalAlignment="Left" Text="{Binding Message}"></TextBlock>
+                                <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="{Binding last_message_date}"></TextBlock>
+                            </Grid>
+                        </Panel>
                     </Border>
                 </DataTemplate>
             </ListBox.ItemTemplate>

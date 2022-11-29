@@ -12,6 +12,8 @@
         <entry key="VkClientAvalonia.GUI.App/Views/Controls/Client/Dialogs.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
         <entry key="VkClientAvalonia.GUI.App/Views/Controls/Client/ListDialogMediator.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
         <entry key="VkClientAvalonia.GUI.App/Views/Controls/Client/ListDialogs.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
+        <entry key="VkClientAvalonia.GUI.App/Views/Controls/Client/Messenger/Messenger.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
+        <entry key="VkClientAvalonia.GUI.App/Views/Controls/Client/Messenger/MessengerMediator.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
         <entry key="VkClientAvalonia.GUI.App/Views/Controls/Dialogs.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
         <entry key="VkClientAvalonia.GUI.App/Views/Controls/u1.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />
         <entry key="VkClientAvalonia.GUI.App/Views/MainWindow.axaml" value="VkClientAvalonia.GUI.App/VkClientAvalonia.GUI.App.csproj" />

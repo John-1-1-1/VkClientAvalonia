@@ -1,19 +1,15 @@
-$HEADER$using Avalonia;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace $NAMESPACE$
-{
-    public partial class $CLASS$ : UserControl
-    {
-        public $CLASS$()
-        {
-            InitializeComponent();
-        }
+namespace VkClientAvalonia.GUI.App.Views.Controls.Client.Messenger; 
 
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
-        }
+public partial class Messenger : UserControl {
+    public Messenger() {
+        InitializeComponent();
+    }
+
+    private void InitializeComponent() {
+        AvaloniaXamlLoader.Load(this);
     }
 }

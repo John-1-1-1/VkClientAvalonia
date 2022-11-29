@@ -48,6 +48,7 @@ public class MainWindowViewModel : ViewModelBase, IMainControls {
     public void ShowDialogsControl() {
         DialogControlStateShow = true;
         AutorizationControlStateShow = false;
+        SingletonContainer.GetInstance().GetContainer().GetObject<IListDialogsViewModel>().ShowData();
     }
 }
 

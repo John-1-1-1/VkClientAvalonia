@@ -4,5 +4,40 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="VkClientAvalonia.GUI.App.Views.Controls.Client.Messenger.Messenger">
-    Welcome to Avalonia!
+    
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="70"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="0" Text="{Binding FriendName}" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"></TextBlock>
+        
+        <ListBox Grid.Row="1" Items="{Binding ListMessages}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border>
+                        <Panel>
+                            <Grid ShowGridLines="True">
+                                <Grid.RowDefinitions></Grid.RowDefinitions>
+                                <Grid.RowDefinitions></Grid.RowDefinitions>
+                                <Border>
+                                    <StackPanel>
+                                        <TextBlock Grid.Row="0"  HorizontalAlignment="Left" 
+                                                   Text="{Binding Name}"></TextBlock>
+                                        <TextBlock Grid.Row="1" HorizontalAlignment="Left" 
+                                                   Text="{Binding Message}"></TextBlock>
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+                        </Panel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+        
+    </Grid>
 </UserControl>

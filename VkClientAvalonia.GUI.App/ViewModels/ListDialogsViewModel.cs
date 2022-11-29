@@ -1,43 +1,46 @@
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Linq;
+using ReactiveUI;
+using VkClientAvalonia.Utils.Containers;
+using VkClientAvalonia.Utils.Vk;
+using VkClientAvalonia.Utils.Vk.SubClass;
 
 namespace VkClientAvalonia.GUI.App.ViewModels;
 
-public class TestUser {
-    public string Name { get; set; }
 
-    public TestUser(string Name) {
-        this.Name = Name;
+public class ListDialogsViewModel: ReactiveObject, IListDialogsViewModel {
+
+    public List<Dialog> _users;
+    public String _userName = "None";
+
+    
+    public String UserName {
+        get => _userName;
+        set => this.RaiseAndSetIfChanged(ref _userName, value);
     }
-}
 
-public class ListDialogsViewModel {
-
-    public ObservableCollection<TestUser> Users { get; set; }
-
-
+    public List<Dialog> Users {
+        get => _users;
+        set => this.RaiseAndSetIfChanged(ref _users, value);
+    }
+    
+    
     public ListDialogsViewModel() {
-        Users = new ObservableCollection<TestUser>();
-        Users.Add(new TestUser("Cat"));
-        Users.Add(new TestUser("Dog"));
-        Users.Add(new TestUser("Fuck"));
-        Users.Add(new TestUser("You"));
-        Users.Add(new TestUser("Cat"));
-        Users.Add(new TestUser("Dog"));
-        Users.Add(new TestUser("Fuck"));
-        Users.Add(new TestUser("You"));
-        Users.Add(new TestUser("Cat"));
-        Users.Add(new TestUser("Dog"));
-        Users.Add(new TestUser("Fuck"));
-        Users.Add(new TestUser("You"));
-        Users.Add(new TestUser("Cat"));
-        Users.Add(new TestUser("Dog"));
-        Users.Add(new TestUser("Fuck"));
-        Users.Add(new TestUser("You"));
-        Users.Add(new TestUser("Cat"));
-        Users.Add(new TestUser("Dog"));
-        Users.Add(new TestUser("Fuck"));
-        Users.Add(new TestUser("You"));
+        Users = new List<Dialog>();
+        SingletonContainer.GetInstance().GetContainer().AddObject<IListDialogsViewModel>(this);
     }
 
+    public void ShowData() {
 
+        var vkClient = SingletonContainer.GetInstance().GetContainer().GetObject<IVkClient>();
+
+        UserName = vkClient.GetUserName();
+        
+        Users = vkClient.GetUserDialogs();
+    }
+    
+    
 }
