@@ -14,7 +14,8 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
     <Panel>
-        <controls:AutorizationControl DataContext="{Binding Container}"/>
+        <controls:AutorizationControl DataContext="{Binding AutorizationViewModel}"/>
+        <client:ListDialogs DataContext="{Binding  }"></client:ListDialogs>
     </Panel>
     
 </Window>
