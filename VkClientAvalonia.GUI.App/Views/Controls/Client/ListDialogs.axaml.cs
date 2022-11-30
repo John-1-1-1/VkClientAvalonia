@@ -12,7 +12,5 @@ public partial class ListDialogs : UserControl {
 
     private void InitializeComponent() {
         AvaloniaXamlLoader.Load(this);
-
-        DataContext = new ListDialogsViewModel();
     }
 }

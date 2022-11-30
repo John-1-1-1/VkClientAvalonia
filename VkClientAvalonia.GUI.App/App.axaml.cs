@@ -7,11 +7,18 @@ using VkClientAvalonia.Utils.Containers;
 using VkClientAvalonia.Utils.Vk;
 
 namespace VkClientAvalonia.GUI.App {
+    
     public partial class App : Application {
+
         public override void Initialize() {
+            
+            InitializeDesigner();
             AvaloniaXamlLoader.Load(this);
         }
 
+        public static void InitializeDesigner() {
+        }
+        
         public override void OnFrameworkInitializationCompleted() {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop) {
                 desktop.MainWindow = new MainWindow {
@@ -21,7 +28,6 @@ namespace VkClientAvalonia.GUI.App {
             
             var singleton = SingletonContainer.GetInstance();
             singleton.GetContainer().AddObject<IVkClient, VkClient>();
-            
             base.OnFrameworkInitializationCompleted();
         }
     }

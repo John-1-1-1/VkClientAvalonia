@@ -9,7 +9,10 @@ public class MainWindowViewModel : ViewModelBase, IMainControls {
 
     private bool _dialogControlStateShow;
 
-    public AutorizationViewModel Autorization { get; set; }
+
+    public AutorizationViewModel AutorizationViewModel { get; set; } = new AutorizationViewModel();
+    public MessengerViewModel MessengerViewModel { get; set; } = new MessengerViewModel();
+    public ListDialogsViewModel ListDialogsViewModel { get; set; } = new ListDialogsViewModel();
 
     public bool DialogControlStateShow {
         get => _dialogControlStateShow;
@@ -26,7 +29,6 @@ public class MainWindowViewModel : ViewModelBase, IMainControls {
     public ReactiveCommand<Unit, Unit> But { get; init; }
     
     public MainWindowViewModel() {
-        Autorization = new AutorizationViewModel();
         DialogControlStateShow = false;
         AutorizationControlStateShow = true;
         

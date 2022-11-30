@@ -6,9 +6,16 @@ using VkClientAvalonia.Utils.Vk;
 namespace VkClientAvalonia.GUI.App.ViewModels; 
 
 public class AutorizationViewModel: ViewModelBase {
-    public string Login { get; set; } 
-    public string Password { get; set; }
+    public string Login { get; set; }
     public ulong AppId { get; set; }
+    
+    private string _password;
+
+    public string Password {
+        get => _password;
+        set => this.RaiseAndSetIfChanged(ref _password, value);
+    }
+
 
     private bool _ErrorTextDtateControl;
 
@@ -22,7 +29,6 @@ public class AutorizationViewModel: ViewModelBase {
     public AutorizationViewModel( ) {
         LoginButton = ReactiveCommand.Create(LoginButton_Click);
         ErrorTextDtateControl = false;
-        
         AppId = 6121396;
     }
 
@@ -31,7 +37,6 @@ public class AutorizationViewModel: ViewModelBase {
         var vkClient = SingletonContainer.GetInstance().GetContainer().GetObject<IVkClient>();
         var value = vkClient.Authorize(Login, Password, AppId);
         
-        SingletonContainer.GetInstance().GetContainer().GetObject<IMainControls>().ShowDialogsControl();
         if (value == 0) {
             SingletonContainer.GetInstance().GetContainer().GetObject<IMainControls>().ShowDialogsControl();
         }

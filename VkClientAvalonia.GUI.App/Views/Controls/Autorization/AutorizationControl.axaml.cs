@@ -8,8 +8,6 @@ namespace VkClientAvalonia.GUI.App.Views.Controls;
 public partial class AutorizationControl : UserControl {
     public AutorizationControl() {
 
-        DataContext = new AutorizationViewModel();
-        
         InitializeComponent();
     }
 
