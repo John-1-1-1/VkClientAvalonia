@@ -27,7 +27,9 @@
             <TextBlock Text="{Binding UserName}"></TextBlock>
         </Border>
         
-        <ListBox Grid.Row="1" Items="{Binding Users}">
+        <ListBox Grid.Row="1" Items="{Binding Users}"
+                 SelectedItem="{Binding SelectedItem}"
+                 Selection="{Binding Selection}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border>
