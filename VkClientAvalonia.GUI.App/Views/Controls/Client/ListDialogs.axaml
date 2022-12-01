@@ -14,7 +14,8 @@
             <RowDefinition ></RowDefinition>
         </Grid.RowDefinitions>
         
-        <Button Grid.Row="0" HorizontalAlignment="Left"> Выйти </Button>
+        <Button Grid.Row="0" HorizontalAlignment="Left"
+                Command="{Binding Exit}" > Выйти </Button>
         
         <Border Grid.Row="0"  HorizontalAlignment="Right" 
                 Margin="0 0 25 0"

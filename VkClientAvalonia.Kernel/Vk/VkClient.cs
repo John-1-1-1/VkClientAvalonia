@@ -6,10 +6,11 @@ using VkNet.Model;
 namespace VkClientAvalonia.Utils.Vk; 
 
 public class VkClient: IVkClient {
-    
-    private VkApi api = new VkApi();
+
+    private VkApi api { get; set; }
 
     public int Authorize(string login, string password, ulong appId ) {
+        api = new VkApi();
         try {
             api.Authorize(new ApiAuthParams() {
                 Login = login,

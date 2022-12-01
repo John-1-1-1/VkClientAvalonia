@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Reactive;
 using ReactiveUI;
 using VkClientAvalonia.Utils.Containers;
 using VkClientAvalonia.Utils.Vk;
@@ -16,7 +17,8 @@ public class ListDialogsViewModel: ReactiveObject, IListDialogsViewModel {
     public List<Dialog> _users;
     public String _userName = "None";
 
-    
+    public ReactiveCommand<Unit, Unit> Exit { get; set; }
+
     public String UserName {
         get => _userName;
         set => this.RaiseAndSetIfChanged(ref _userName, value);
@@ -31,6 +33,9 @@ public class ListDialogsViewModel: ReactiveObject, IListDialogsViewModel {
     public ListDialogsViewModel() {
         Users = new List<Dialog>();
         SingletonContainer.GetInstance().GetContainer().AddObject<IListDialogsViewModel>(this);
+        Exit = ReactiveCommand.Create( () => 
+            SingletonContainer.GetInstance().GetContainer().
+                GetObject<IMainControls>().ShowAutorizationControl());
     }
 
     public void ShowData() {

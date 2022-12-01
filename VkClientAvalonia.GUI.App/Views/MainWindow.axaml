@@ -14,8 +14,12 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
     <Panel>
-        <controls:AutorizationControl DataContext="{Binding AutorizationViewModel}"/>
-        <client:ListDialogs DataContext="{Binding  }"></client:ListDialogs>
+        <Panel IsVisible="{Binding AutorizationControlStateShow}">
+            <controls:AutorizationControl DataContext="{Binding AutorizationViewModel}"/>
+        </Panel>
+        <Panel IsVisible="{Binding DialogControlStateShow}">
+            <client:ListDialogs DataContext="{Binding ListDialogsViewModel}"/>
+        </Panel>
     </Panel>
     
 </Window>

@@ -6,12 +6,9 @@ using VkClientAvalonia.Utils.Vk;
 namespace VkClientAvalonia.GUI.App.ViewModels;
 
 public class MainWindowViewModel : ViewModelBase, IMainControls {
-
+    
     private bool _dialogControlStateShow;
-
-
     public AutorizationViewModel AutorizationViewModel { get; set; } = new AutorizationViewModel();
-    public MessengerViewModel MessengerViewModel { get; set; } = new MessengerViewModel();
     public ListDialogsViewModel ListDialogsViewModel { get; set; } = new ListDialogsViewModel();
 
     public bool DialogControlStateShow {
@@ -20,7 +17,6 @@ public class MainWindowViewModel : ViewModelBase, IMainControls {
     }
 
     private bool _autorizationControlStateShow;
-
     public bool AutorizationControlStateShow {
         get => _autorizationControlStateShow;
         set => this.RaiseAndSetIfChanged(ref _autorizationControlStateShow, value);
@@ -40,13 +36,10 @@ public class MainWindowViewModel : ViewModelBase, IMainControls {
         var singleton = SingletonContainer.GetInstance();
         singleton.GetContainer().AddObject<IMainControls>(this);
     }
-
-    
     public void ShowAutorizationControl() {
         DialogControlStateShow = false;
         AutorizationControlStateShow = true;
     }
-
     public void ShowDialogsControl() {
         DialogControlStateShow = true;
         AutorizationControlStateShow = false;
