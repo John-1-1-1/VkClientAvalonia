@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:client="clr-namespace:VkClientAvalonia.GUI.App.Views.Controls.Client"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="VkClientAvalonia.GUI.App.Views.Controls.Client.ListDialogs"
              >
@@ -34,17 +35,7 @@
                 <DataTemplate>
                     <Border>
                         <Panel>
-                            <Grid ShowGridLines="True">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="180"></ColumnDefinition>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="140"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
-                            
-                                <TextBlock Grid.Column="0"  HorizontalAlignment="Left" Text="{Binding Name}"></TextBlock>
-                                <TextBlock Grid.Column="1" HorizontalAlignment="Left" Text="{Binding Message}"></TextBlock>
-                                <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="{Binding last_message_date}"></TextBlock>
-                            </Grid>
+                            <client:DialogCard/>
                         </Panel>
                     </Border>
                 </DataTemplate>

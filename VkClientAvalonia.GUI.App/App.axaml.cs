@@ -11,7 +11,6 @@ namespace VkClientAvalonia.GUI.App {
     public partial class App : Application {
 
         public override void Initialize() {
-            
             InitializeDesigner();
             AvaloniaXamlLoader.Load(this);
         }

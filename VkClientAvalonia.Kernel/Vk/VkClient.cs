@@ -78,7 +78,16 @@ public class VkClient: IVkClient {
         return listDialogs;
     }
 
-    public void sendMessage() {
-        
+    
+    
+    public void sendMessage(Dialog dialog) {
+        Random rnd = new Random();
+        api.Messages.Send(new VkNet.Model.RequestParams.MessagesSendParams
+        {
+            RandomId = rnd.Next(0, 2147483647),
+            UserId = dialog.id,
+            Message = dialog.Message
+        });
+
     }
 }
