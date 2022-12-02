@@ -7,6 +7,17 @@ public class Dialog {
     public string? Name { get; set; }
     public string last_message_date { get; set; }
     
+    public Dialog(long id,string last_message_date, string message, string name) {
+        this.id = id;
+        this.Name = null;
+        this.Message = message;
+        this.Name = name;
+        if (message == "") {
+            this.Message = "Файл";
+        }
+        this.last_message_date = last_message_date;
+    }
+    
     public Dialog(long id,string last_message_date, string message) {
         this.id = id;
         this.Name = null;
@@ -15,9 +26,5 @@ public class Dialog {
             this.Message = "Файл";
         }
         this.last_message_date = last_message_date;
-    }
-
-    public void AddName(string name) {
-        this.Name = name;
     }
 }

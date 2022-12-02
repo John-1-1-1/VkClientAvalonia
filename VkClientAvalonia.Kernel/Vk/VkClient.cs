@@ -40,44 +40,47 @@ public class VkClient: IVkClient {
         return userProfileInfo.FirstName + " " + userProfileInfo.LastName;
     }
 
+
     public List<Dialog>? GetUserDialogs() {
         
         long id_line = 2000000000;
-        var dialogs = api.Messages.GetConversations(new VkNet.Model.RequestParams.GetConversationsParams());
-        var chats = dialogs.Items;
-        
-        var ids = chats.Select(x => x.Conversation.Peer.Id).ToList();
+        var dialogs = api.Messages.GetConversations(new VkNet.Model.RequestParams.GetConversationsParams() {
+            Count = 50
+        });
+        int index;
+        var chats = dialogs.Items; 
+        List<Dialog> listDialogs = new List<Dialog>();
 
-        var listDialogs = chats
-            .Select(x => new Dialog(x.Conversation.Peer.Id,
-                x.LastMessage.Date.ToString(),
-                x.LastMessage.Text)).ToList();
-        
-        var ids_user = ids.Select(x => x).Where(i => i < id_line).ToList();
-        var ids_chats = ids.Where(i => i >= id_line).Select(x => x - id_line).ToList();
+        List<long> listUsersId = new List<long>();
 
-        var users_names = api.Users.Get(ids_user);
-        var dialogs_names = api.Messages.GetChat( chatIds: ids_chats);
 
-        for (int i = 0; i < listDialogs.Count; i++) {
-            var user_name = users_names.SingleOrDefault(x => x.Id == listDialogs[i].id, null);
-            var dialog_name = dialogs_names.SingleOrDefault(x => x.Id == listDialogs[i].id - id_line, null);
-
-            if (user_name != null) {
-                listDialogs[i].Name = user_name.FirstName + " " + user_name.LastName;
+        for (index = 0; index < chats.Count; index++) {
+            if (chats[index].Conversation.Peer.Type.ToString() == "chat") {
+                listDialogs.Add(new Dialog(chats[index].Conversation.Peer.Id,
+                    chats[index].LastMessage.Date.Value.ToString(),
+                    chats[index].LastMessage.Text,
+                    chats[index].Conversation.ChatSettings.Title));
             }
-            else if (dialog_name != null) {
-                listDialogs[i].Name = dialog_name.Title;
-            }
-            else {
-            
-                listDialogs.RemoveAt(i);
+            if (chats[index].Conversation.Peer.Type.ToString() == "user") {
+                listDialogs.Add(new Dialog(chats[index].Conversation.Peer.Id,
+                    chats[index].LastMessage.Date.Value.ToString(),
+                    chats[index].LastMessage.Text));
+                listUsersId.Add(chats[index].Conversation.Peer.Id);
             }
         }
 
+        foreach (var user in api.Users.Get(listUsersId)) {
+            if (user == null) {
+                continue;
+            }
+            for (index = 0; index < listDialogs.Count; index++) {
+                if (listDialogs[index].id == user.Id) {
+                    listDialogs[index].Name = user.FirstName + " " + user.LastName;
+                }
+            }
+        }
         return listDialogs;
     }
-
     
     
     public void sendMessage(Dialog dialog) {
