@@ -1,0 +1,42 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:client="clr-namespace:VkClientAvalonia.GUI.App.Views.Controls.Client"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="VkClientAvalonia.GUI.App.Views.Controls.Client.ListDialog">
+    <Grid  ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="70" MinHeight="40">
+            </RowDefinition> 
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Button Grid.Row="0" HorizontalAlignment="Left"
+                Command="{Binding Exit}" > Выйти </Button>
+        
+        <Border Grid.Row="0"  HorizontalAlignment="Right" 
+                Margin="0 0 25 0"
+                Padding="5"
+                VerticalAlignment="Center"
+                Background="GhostWhite"
+                BorderBrush="Gainsboro"
+                BorderThickness="1">
+            <TextBlock Text="{Binding UserName}"></TextBlock>
+        </Border>
+        
+        <ListBox Grid.Row="1" Items="{Binding Users}"
+                 SelectedItem="{Binding SelectedItem}"
+                 Selection="{Binding Selection}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border>
+                        <Panel>
+                            <client:DialogCard/>
+                        </Panel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>

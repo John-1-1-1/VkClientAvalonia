@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:subClass="clr-namespace:VkClientAvalonia.Utils.Vk.SubClass;assembly=VkClientAvalonia.Kernel"
              mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="50"
              x:Class="VkClientAvalonia.GUI.App.Views.Controls.Client.DialogCard">
     
@@ -30,7 +31,9 @@
                     Width="NaN">
                 <TextBlock Padding="10 0 10 0"
                            HorizontalAlignment="Center"
-                           VerticalAlignment="Center">none</TextBlock>
+                           VerticalAlignment="Center"
+                           Text="{Binding UnreadMessages}"
+                           IsVisible="{Binding VisibleUnreadNumber}">none</TextBlock>
             </Border>
             <TextBlock Grid.Column="2" 
                        HorizontalAlignment="Center"

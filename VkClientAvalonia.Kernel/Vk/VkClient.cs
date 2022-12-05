@@ -6,7 +6,6 @@ using VkNet.Model;
 namespace VkClientAvalonia.Utils.Vk; 
 
 public class VkClient: IVkClient {
-
     private VkApi api { get; set; }
 
     public int Authorize(string login, string password, ulong appId ) {
@@ -59,12 +58,16 @@ public class VkClient: IVkClient {
                 listDialogs.Add(new Dialog(chats[index].Conversation.Peer.Id,
                     chats[index].LastMessage.Date.Value.ToString(),
                     chats[index].LastMessage.Text,
-                    chats[index].Conversation.ChatSettings.Title));
+                    chats[index].Conversation.ChatSettings.Title,
+                    chats[index].Conversation.UnreadCount == null? 0: 
+                        chats[index].Conversation.UnreadCount.Value));
             }
             if (chats[index].Conversation.Peer.Type.ToString() == "user") {
                 listDialogs.Add(new Dialog(chats[index].Conversation.Peer.Id,
                     chats[index].LastMessage.Date.Value.ToString(),
-                    chats[index].LastMessage.Text));
+                    chats[index].LastMessage.Text,
+                    chats[index].Conversation.UnreadCount == null? 0: 
+                        chats[index].Conversation.UnreadCount.Value));
                 listUsersId.Add(chats[index].Conversation.Peer.Id);
             }
         }

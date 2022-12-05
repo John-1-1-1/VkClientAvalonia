@@ -13,9 +13,11 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         
+        <Button Grid.Row="0" Command="{Binding Exit}">Выйти</Button>
+        
         <TextBlock Grid.Row="0" Text="{Binding FriendName}" 
                    HorizontalAlignment="Center" 
-                   VerticalAlignment="Center"></TextBlock>
+                   VerticalAlignment="Center">None</TextBlock>
         
         <ListBox Grid.Row="1" Items="{Binding ListMessages}">
             <ListBox.ItemTemplate>
@@ -28,9 +30,9 @@
                                 <Border>
                                     <StackPanel>
                                         <TextBlock Grid.Row="0"  HorizontalAlignment="Left" 
-                                                   Text="{Binding Name}"></TextBlock>
+                                                   Text="{Binding Name}">None</TextBlock>
                                         <TextBlock Grid.Row="1" HorizontalAlignment="Left" 
-                                                   Text="{Binding Message}"></TextBlock>
+                                                   Text="{Binding Message}">None</TextBlock>
                                     </StackPanel>
                                 </Border>
                             </Grid>

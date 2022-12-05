@@ -17,17 +17,33 @@ public class ListDialogsViewModel: ReactiveObject, IListDialogsViewModel {
 
     public List<Dialog> _users;
     public String _userName = "None";
-    
     public SelectionModel<Dialog> Selection { get; set; }
 
-    private Dialog _selectedItem;
-
-    public Dialog SelectedItem
+    public MessengerViewModel MessengerViewModel { get; set; } = new MessengerViewModel();
+    
+    private bool _isMessengerShow;
+    public bool IsMessengerShow 
     {
-        get => _selectedItem;
-        set => this.RaiseAndSetIfChanged(ref _selectedItem, value);
+        get => _isMessengerShow;
+        set => this.RaiseAndSetIfChanged(ref _isMessengerShow, value);
+    }
+    
+    private bool _isListDialogShow;
+    public bool IsListDialogShow
+    {
+        get => _isListDialogShow;
+        set => this.RaiseAndSetIfChanged(ref _isListDialogShow, value);
     }
 
+    public void ShowListDialog() {
+        IsMessengerShow = false;
+        IsListDialogShow = true;
+    }
+
+    public void ShowMessenger() {
+        IsMessengerShow = true;
+        IsListDialogShow = false;
+    }
     
     public ReactiveCommand<Unit, Unit> Exit { get; set; }
 
@@ -43,7 +59,7 @@ public class ListDialogsViewModel: ReactiveObject, IListDialogsViewModel {
 
     public ListDialogsViewModel() {
         Users = new List<Dialog>();
-        
+        ShowListDialog();
         Selection = new SelectionModel<Dialog>();
 
         Selection.SelectionChanged += SelectedChanged;
@@ -53,14 +69,14 @@ public class ListDialogsViewModel: ReactiveObject, IListDialogsViewModel {
             SingletonContainer.GetInstance().GetContainer().
                 GetObject<IMainControls>().ShowAutorizationControl());
     }
-
+    
     private void SelectedChanged(object? sender, SelectionModelSelectionChangedEventArgs<Dialog> e) {
         var item = ((SelectionModel<Dialog>)sender).SelectedItem;
         if (item == null) {
             throw new ArgumentNullException();
         }
-        
-        
+        SingletonContainer.GetInstance().GetContainer().GetObject<IMessengerViewModel>().ChangeDialog(item);
+        ShowMessenger();
     }
     
     public void ShowData() {
@@ -71,6 +87,12 @@ public class ListDialogsViewModel: ReactiveObject, IListDialogsViewModel {
         
         Users = vkClient.GetUserDialogs();
     }
-    
-    
+}
+
+public interface IListDialogsViewModel {
+    public void ShowData();
+
+    public void ShowListDialog();
+
+    public void ShowMessenger();
 }
