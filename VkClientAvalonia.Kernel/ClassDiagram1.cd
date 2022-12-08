@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="VkClientAvalonia.Utils.Vk.VkClient" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAEAAAAAAAQAAAAAgAAAAAAAAACAABAAAAAA=</HashCode>
+      <FileName>Vk\VkClient.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="api" />
+    </ShowAsAssociation>
+    <Lollipop Orientation="Left" Position="0.1" />
+  </Class>
+  <Class Name="VkClientAvalonia.Utils.Containers.ContextContainer">
+    <Position X="4.5" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAIAAAAAAAAAAABAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Containers\ContextContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VkClientAvalonia.Utils.Containers.SingletonContainer">
+    <Position X="1.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAgAAAAAQAAAAACAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Containers\SingletonContainer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Context" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="VkNet.VkApi" Collapsed="true">
+    <Position X="11" Y="2" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
