@@ -1,0 +1,101 @@
+@startuml
+
+class DialogData {
+    + string NameFriend 
+    + string TextMessage 
+    + DialogData(string nameFriend, string textMessage)
+}
+
+class Dialog {    
+    + string Message
+    + long id 
+    + string? Name 
+    + string last_message_date 
+    + long UnreadMessages 
+    + bool VisibleUnreadNumber 
+    + Dialog(long id,string lm_date, string mess, string name, long unreadMess) 
+    + Dialog(long id,string lm_date, string mess, long unreadMess) 
+    + Dialog() 
+}
+
+
+
+class AutorizationViewModel {
+    + string Login 
+    + ulong AppId     
+    - string _password
+    + string Password 
+    - bool _ErrorTextDtateControl
+    + bool ErrorTextDtateControl 
+    + ReactiveCommand<Unit, Unit> LoginButton
+    + AutorizationViewModel()
+    - void LoginButton_Click() 
+}
+
+ViewModelBase <|-up- AutorizationViewModel
+
+class ListDialogsViewModel{
+    + List<Dialog> _users
+    + String _userName
+    + SelectionModel<Dialog> Selection 
+    + MessengerViewModel MessengerViewModel
+    - bool _isMessengerShow
+    + bool IsMessengerShow 
+    - bool _isListDialogShow
+    + bool IsListDialogShow
+    + void ShowListDialog()
+    + void ShowMessenger() 
+    + ReactiveCommand<Unit, Unit> Exit
+    + String UserName
+    + List<Dialog> Users
+    + ListDialogsViewModel()
+    - void SelectedChanged(object? s, SelectionModel<Dialog> e)
+    + void ShowData()
+}
+
+IListDialogsViewModel ()- ListDialogsViewModel
+ViewModelBase <|-up- ListDialogsViewModel
+
+
+
+class MainWindowViewModel {
+    - bool _dialogControlStateShow;
+    + AutorizationViewModel AutorizationViewModel 
+    + ListDialogsViewModel ListDialogsViewModel 
+    + bool DialogControlStateShow
+    - bool _autorizationControlStateShow
+    + bool AutorizationControlStateShow
+    + ReactiveCommand<Unit, Unit> But
+    + MainWindowViewModel() 
+    + void ShowAutorizationControl()
+    + void ShowDialogsControl()
+}
+
+
+MainWindowViewModel-()IMainControls
+ViewModelBase <|-up- MainWindowViewModel
+
+\
+class MessengerViewModel{
+    - List<DialogData> listDialog 
+    - string _friendName
+    + string FriendName
+    + ReactiveCommand<Unit, Unit> Exit 
+    + MessengerViewModel() 
+    + void ChangeDialog(Dialog dialog)
+}
+
+IMessengerViewModel ()-- MessengerViewModel
+ViewModelBase <|-up- MessengerViewModel
+MainWindowViewModel *-- ListDialogsViewModel
+MainWindowViewModel *- AutorizationViewModel
+ListDialogsViewModel *- MessengerViewModel
+DialogData -up-> MessengerViewModel
+Dialog --> MessengerViewModel
+Dialog --> ListDialogsViewModel
+
+
+class ViewModelBase 
+
+
+@enduml
