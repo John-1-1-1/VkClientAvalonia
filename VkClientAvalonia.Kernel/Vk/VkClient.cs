@@ -17,7 +17,6 @@ public class VkClient: IVkClient {
                 ApplicationId = appId,
                 Settings = Settings.All
             });
-
             return 0;
         }
         catch {

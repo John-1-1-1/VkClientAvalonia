@@ -48,28 +48,21 @@ public class ContextContainer {
     }
     
     public TypeObj GetObject<TypeObj>() {
-
         Type? key = null;
-
         foreach (var keyContainerItem in KeyItems) {
             if (keyContainerItem == typeof(TypeObj)) {
                 key = keyContainerItem;
                 break;
             }
         }
-
         if (key == null) {
             throw new ArgumentNullException($"{nameof(key)}");
         }
-
         object? obj = null;
-
         Context.TryGetValue(key, out obj);
-
         if (obj == null) {
             throw new ArgumentNullException($"{nameof(obj)}");
         }
-
         return (TypeObj)obj;
     }
 }

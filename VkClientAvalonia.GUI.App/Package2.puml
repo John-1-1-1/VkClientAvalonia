@@ -1,0 +1,32 @@
+@startuml
+package VKClientAvalonia.Kernel{
+
+component ContextContainer
+
+component SingletonContainer
+
+component DialogData 
+
+component Dialog 
+
+component VkClient
+
+[VkClient] -- IVkClient 
+
+}
+
+package VKClientAvalonia.GUI.App{
+[Dialog] -up-|> [MessengerViewModel]
+[Dialog] --|> [ListDialogsViewModel]
+[DialogData] -up-|> [MessengerViewModel]
+
+IListDialogsViewModel -up-o [SingletonContainer]
+IMainWindowViewModel  -up-o [SingletonContainer]
+IMessengerViewModel  -up-o [SingletonContainer]
+IVkClient  --o [SingletonContainer]
+
+ContextContainer --o [SingletonContainer]
+[VkClient] <|-- [Dialog]
+}
+
+@enduml

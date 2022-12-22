@@ -1,0 +1,56 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+activate Autorization
+activate User
+User ->(10) Autorization: Авторизация 
+deactivate User
+Autorization ->(10) VkClient
+activate VkClient
+Autorization (10)<- VkClient: Ответ
+deactivate VkClient
+
+Autorization ->(10) ListDialog
+deactivate Autorization
+activate ListDialog
+ListDialog ->(10) VkClient: \t\t\t\tПолучить диалоги
+activate VkClient
+ListDialog (10)<- VkClient: \t\t\t\tСписок диалогов
+deactivate VkClient
+User (10)<- ListDialog: Выбор
+activate User
+User ->(10) ListDialog: Диалог
+deactivate User
+ListDialog ->(10) Messenger
+deactivate
+activate Messenger
+Messenger->(10) VkClient: Получение сообщений
+activate VkClient
+Messenger(10)<- VkClient:
+deactivate VkClient
+Messenger ->(10) User: Сообщения
+activate User
+Messenger (10)<- User: Отправка сообщения
+deactivate User
+Messenger ->(10) VkClient
+activate VkClient
+Messenger (10)<- VkClient
+deactivate VkClient
+
+
+box "User" #Yellow
+participant User
+end box
+
+box "GUI.App" #LightBlue
+participant ListDialog
+participant Autorization
+participant Messenger
+end box
+
+box "Kernel" #LightGreen
+participant VkClient
+end box
+
+@enduml

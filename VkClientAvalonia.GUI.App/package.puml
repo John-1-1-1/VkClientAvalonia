@@ -1,0 +1,43 @@
+@startuml
+
+package VKClientAvalonia.GUI.App{
+
+component AutorizationViewModel 
+
+component ListDialogsViewModel
+
+component MainWindowViewModel 
+
+component MessengerViewModel
+
+component ViewModelBase
+
+[ViewModelBase] <|-- [AutorizationViewModel]
+[ViewModelBase] <|-- [ListDialogsViewModel]
+[ViewModelBase] <|-- [MainWindowViewModel]
+[ViewModelBase] <|-- [MessengerViewModel]
+
+IListDialogsViewModel -up- [ListDialogsViewModel]
+IMainWindowViewModel -up- [MainWindowViewModel]
+IMessengerViewModel -up- [MessengerViewModel]
+
+[MainWindowViewModel] *-- [AutorizationViewModel]
+[MainWindowViewModel] *-- [ListDialogsViewModel]
+[ListDialogsViewModel] *-- [MessengerViewModel]
+
+}
+
+package VKClientAvalonia.Kernel{
+
+[Dialog] -up-|> [MessengerViewModel]
+[Dialog] -up-|> [ListDialogsViewModel]
+[DialogData] -up-|> [MessengerViewModel]
+
+IListDialogsViewModel --o [SingletonContainer]
+IMainWindowViewModel  --o [SingletonContainer]
+IMessengerViewModel  --o [SingletonContainer]
+
+
+
+
+@enduml
